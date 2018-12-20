@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b75ab6a5-c9ab-4e17-8749-adfa2071aad5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/playground/mongoose-remove.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="73" column="3" selection-start-line="51" selection-end-line="73" selection-end-column="3" />
+            <state relative-caret-position="275">
+              <caret line="107" column="31" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -30,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
@@ -39,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/server/db/mongoose.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -56,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/tests/server.test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="76" column="3" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
+            <state relative-caret-position="343">
+              <caret line="140" column="21" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -96,19 +96,19 @@
         <option value="$PROJECT_DIR$/server/models/todo.js" />
         <option value="$PROJECT_DIR$/server/models/user.js" />
         <option value="$PROJECT_DIR$/playground/mongoose-queries.js" />
-        <option value="$PROJECT_DIR$/server/tests/server.test.js" />
         <option value="$PROJECT_DIR$/server/db/mongoose.js" />
         <option value="$PROJECT_DIR$/playground/mongoose-remove.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/server/tests/server.test.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2037" />
-    <option name="y" value="21" />
-    <option name="width" value="1071" />
-    <option name="height" value="943" />
+    <option name="x" value="2013" />
+    <option name="y" value="63" />
+    <option name="width" value="1487" />
+    <option name="height" value="869" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -150,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545265347682" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545276790601" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../node-web-server" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -220,7 +220,7 @@
       <workItem from="1544578202100" duration="3943000" />
       <workItem from="1544628685460" duration="11243000" />
       <workItem from="1544679540310" duration="1836000" />
-      <workItem from="1545237124809" duration="11583000" />
+      <workItem from="1545237124809" duration="15868000" />
     </task>
     <task id="LOCAL-00001" summary="new delete function">
       <created>1544030516747</created>
@@ -292,11 +292,25 @@
       <option name="project" value="LOCAL" />
       <updated>1545255576692</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added in DELETE functionality">
+      <created>1545265417380</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1545265417380</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added tests for DELETE functionality">
+      <created>1545270414757</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1545270414757</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53045000" />
+    <option name="totallyTimeSpent" value="57330000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -308,10 +322,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2037" y="21" width="1071" height="943" extended-state="0" />
-    <editor active="true" />
+    <frame x="2013" y="63" width="1487" height="869" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28091" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19901893" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -326,7 +339,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329927" />
       <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3227446" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.35624123" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32837838" />
@@ -357,7 +370,9 @@
     <MESSAGE value="GET by ID via Postman" />
     <MESSAGE value="added in test cases for todo GET by ID" />
     <MESSAGE value="added in support for Heroku deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="added in support for Heroku deployment" />
+    <MESSAGE value="added in DELETE functionality" />
+    <MESSAGE value="added tests for DELETE functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="added tests for DELETE functionality" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -426,13 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/tests/server.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="76" column="3" selection-start-line="76" selection-start-column="3" selection-end-line="76" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/playground/mongodb-connect.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -443,7 +451,7 @@
     <entry file="file://$PROJECT_DIR$/server/db/mongoose.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -457,7 +465,7 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -468,10 +476,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/tests/server.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="140" column="21" selection-start-line="140" selection-start-column="21" selection-end-line="140" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="73" column="3" selection-start-line="51" selection-end-line="73" selection-end-column="3" />
+        <state relative-caret-position="275">
+          <caret line="107" column="31" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
         </state>
       </provider>
     </entry>
