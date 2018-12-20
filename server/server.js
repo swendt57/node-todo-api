@@ -12,6 +12,26 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
+//**************REMOVE EXAMPLES********************
+
+app.delete('/todos/:id', (req, res) => {
+    let id = req.params.id;
+
+    if( ! ObjectID.isValid(id)) {
+        return res.status(404).send();
+    }
+
+    Todo.findByIdAndRemove(id).then((todo) => {
+        if( ! todo) {
+           return res.status(404).send();
+        }
+        res.send({todo});
+
+    }).catch((e) => res.status(400).send())
+});
+
+//**************POST EXAMPLES*********************
+
 app.post('/todos', (req, res) => {
     // console.log("Hello");
     // console.log(req.body);
@@ -26,6 +46,8 @@ app.post('/todos', (req, res) => {
         res.status(400).send(e);
     });
 });
+
+//*************GET EXAMPLES************************
 
 app.get('/todos', (req, res) => {
     Todo.find().then((todos) => {
