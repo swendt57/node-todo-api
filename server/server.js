@@ -105,7 +105,7 @@ app.patch('/todos/:id', (req, res) => {
 
         res.send({todo: todo});  //can also use just {todo} in this case
     }).catch((e) => {
-        res.status(400).send();
+        res.status(400).send();o
     })
 });
 

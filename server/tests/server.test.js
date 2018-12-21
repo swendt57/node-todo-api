@@ -10,7 +10,9 @@ const todos = [{
     text: 'First test todo'
 }, {
     _id: new ObjectID,
-    text: 'Second test todo'
+    text: 'Second test todo',
+    completed: true,
+    completedAt: 123445
 }];
 
 beforeEach((done) => { //this wipes out all data in the DB
@@ -20,6 +22,7 @@ beforeEach((done) => { //this wipes out all data in the DB
 })
 
 describe ('POST /todos', () => {
+
     it('should create a new todo', (done) => {
         let text = 'Test todo text';
 
@@ -65,6 +68,7 @@ describe ('POST /todos', () => {
 });
 
 describe('GET /todos', () => {
+
     it('should get all todos', (done) => {
         request(app)
             .get('/todos')
@@ -77,6 +81,7 @@ describe('GET /todos', () => {
 });
 
 describe('GET /todos/:id', () => {
+
     it('shopuld return todo doc', (done)=> {
         request(app)
             .get(`/todos/${todos[0]._id.toHexString()}`)
@@ -105,6 +110,7 @@ describe('GET /todos/:id', () => {
 });
 
 describe('DELETE /todos/:id', () => {
+
     it('should remove a todo', (done)=> {
         let hexId = todos[1]._id.toHexString();
 
@@ -142,4 +148,45 @@ describe('DELETE /todos/:id', () => {
             .expect(404)
             .end(done);
     });
+});
+
+describe('PATCH /todos/:id', () => {
+
+    it('should update the todo', (done) => {
+        let hexId = todos[0]._id.toHexString();
+        let textToUpdate = 'yankee doodle dandy';
+
+        request(app)
+            .patch(`/todos/${hexId}`)
+            .send({
+                completed: true,
+                text: textToUpdate
+            })
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.todo).toInclude({text: textToUpdate, completed: true});
+                expect(res.body.todo.completedAt).toBeA('number');
+            })
+            .end(done);
+    });
+
+    it('should clear completedAt when todo is not completed', (done) => {
+        let hexId = todos[1]._id.toHexString();
+        let textToUpdate = 'it was a dark and stormy night';
+
+        request(app)
+            .patch(`/todos/${hexId}`)
+            .send({
+                text: textToUpdate,
+                completed: false
+            })
+            .expect(200)
+            .expect((res) => {
+                expect(res.body.todo).toInclude({text: textToUpdate, completed: false});
+                expect(res.body.todo.completedAt).toNotExist();
+            })
+            .end(done);
+    });
+
+
 });
