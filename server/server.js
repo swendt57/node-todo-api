@@ -1,15 +1,16 @@
-require('./config/config.js')
+require('./config/config.js');
 
 const _ = require('lodash');
 const express = require('express');
 const bodyParser = require('body-parser');
 const {ObjectID} = require('mongodb');
 
-var {mongoose} = require('./db/mongoose');
-var {Todo} = require('./models/todo');
-var {User} = require('./models/user');
+let {mongoose} = require('./db/mongoose');
+let {Todo} = require('./models/todo');
+let {User} = require('./models/user');
+let {authenticate} = require('./middleware/authenticate');
 
-var  app = express();
+let  app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
@@ -70,6 +71,11 @@ app.get('/todos/:id', (req, res) => {
         }
         res.send({todo});
     }).catch((e) => res.status(400).send({}))
+});
+
+
+app.get('/users/me', authenticate, (req, res) => {
+    res.send(req.user);
 });
 
 // User.findById(userID).then((user) => {
@@ -165,4 +171,5 @@ module.exports = {app};
 // }, (e) => {
 //     console.log('unable to save todo');
 // });
+
 
