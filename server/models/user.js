@@ -8,9 +8,9 @@ let UserSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
+        unique: true,
         minlength: 1,
         trim: true,
-        unique: true,
         validate: {
             validator: validator.isEmail,
             // validator: (value) => { //verbose version

@@ -30,7 +30,7 @@ const todos = [{
     completedAt: 123445
 }];
 
-const populateTodos = (done) => { //this wipes out all data in the DB
+const populateTodos = (done) => {
     Todo.remove({}).then(() => {
         Todo.insertMany(todos);
     }).then(() => done());
