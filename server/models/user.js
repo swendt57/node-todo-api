@@ -50,7 +50,7 @@ UserSchema.methods.generateAuthToken = function () {
     let access = 'auth';
     let token = jwt.sign({_id: user._id.toHexString(), access}, '123abc').toString();
 
-    user.tokens = user.tokens.concat([{access, token}]);
+    user.tokens = user.tokens.concat([{access, token}]); //Update from class
 
     return user.save().then(() => {
         return token;
@@ -63,9 +63,8 @@ UserSchema.statics.findByToken = function(token) {
     var decoded;
 
     try {
-        console.log('stop');
         decoded = jwt.verify(token, '123abc');
-        console.log(`decoded: ${decoded}` );
+
     }catch(e) {
         return Promise.reject(); //shorthand
 
@@ -79,8 +78,33 @@ UserSchema.statics.findByToken = function(token) {
         'tokens.token': token,
         'tokens.access': 'auth'
 
-    })
+    });
 };
+
+
+//NOT WORKING!!!!!!!!!!!!!!!!!!!!!!!!!!
+UserSchema.statics.findByCredentials = function(email, password) {
+    var User = this;
+
+    // console.log(User.findOne({email: email}));
+
+    return User.findOne({email: email}).then((user) => {
+
+        if( ! user) {
+            return Promise.reject();
+        }
+
+        return new Promise((resolve, reject) => {
+            bcrypt.compare(password, user.password, (err, res) => {
+                if(res) {
+                    resolve(user);
+                } else {
+                    reject();
+                }
+            });
+        });
+    });
+}
 
 UserSchema.pre('save', function(next) {
     let user = this;
